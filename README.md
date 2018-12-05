@@ -80,6 +80,7 @@ void convert_all(unsigned nlines, char *lines[], quote_t nums[])
 }
 ```
 and my timings are as follows:
+
 | Implementation | Average Runtime | Speedup from Previous |
 | -------------  | :-------------: | :-------:             |
 | #0 (original)  | 0.041707        | baseline              |
