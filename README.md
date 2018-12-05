@@ -17,7 +17,7 @@ void convert_all(unsigned nlines, char *lines[], quote_t nums[])
   }
 }
 ```
-This took roughly **0.041707 seconds** on my machine (this was based on running the program 3 times and taking the average, and subsequent timings will also be recorded this way).
+This took roughly **0.041707 seconds** on my machine (this was based on running the program 3 times and taking the average, subsequent timings will also be recorded this way).
 
 ### Implementation #1:
 The standard library function `atoi` takes a whole string and magically transforms it into a number. Then it struck me that the 'a' in '`atoi`' stands for ASCII, and I thought I'd use the ASCII table to convert not a whole string, but one character (which is a digit in this case) at a time. This led me to this code:
@@ -27,7 +27,7 @@ void convert_all(unsigned nlines, char *lines[], quote_t nums[])
   for (unsigned i = 0; i < nlines; ++i) {
     char *line = lines[i];
     quote_t num = 0;
-    // While the next character (digit) is in range [0,9], take the number multiply it by 10 (to make room for the next digit)
+    // While the next character (digit) is in range [0,9], take `num` and multiply it by 10 (to make room for the next digit)
     // Add the next digit, which is obtained by subtracting the ASCII code of that character (digit) with the ASCII code for '0'
     // This way, the character '0' gives the number 0, '1' gives 1, and so on
     while (*line >= '0' && *line <= '9') {
@@ -71,6 +71,9 @@ void convert_all(unsigned nlines, char *lines[], quote_t nums[])
   for (unsigned i = 0; i < nlines; ++i) {
     char *line = lines[i];
     quote_t num = 0;
+    // While the next character (digit) is not empty, take `num` and multiply it (bitwise) by 10 (to make room for the next digit)
+    // Add the next digit, which is obtained by subtracting the ASCII code of that character (digit) with the ASCII code for '0'
+    // This way, the character '0' gives the number 0, '1' gives 1, and so on
     while (*line != '\0') {
         num = (num<<3) + (num <<1) + (*line - '0');
         ++line;
@@ -89,5 +92,4 @@ and my timings are as follows:
 | #3             | 0.007134        | 1.04x (5.85x overall) |
 
 
-
-
+This was fun! If Eitan would not mind I would love to see his implementation where it is made to be 8x faster.
