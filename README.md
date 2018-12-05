@@ -85,11 +85,11 @@ void convert_all(unsigned nlines, char *lines[], quote_t nums[])
 and my timings are as follows:
 
 | Implementation | Average Runtime | Speedup from Previous |
-| -------------  | :-------------: | :-------:             |
-| #0 (original)  | 0.041707        | baseline              |
-| #1             | 0.009534        | 4.37x                 |
-| #2             | 0.007391        | 1.29x                 |
-| #3             | 0.007134        | 1.04x (5.85x overall) |
+| :-------------:| :-------------: | :-------:             |
+| #0 (original)  | 0.041707s       | baseline              |
+| #1             | 0.009534s       | 4.37x                 |
+| #2             | 0.007391s       | 1.29x                 |
+| #3             | 0.007134s       | 1.04x (5.85x overall) |
 
 
 This was fun! If Eitan would not mind I would love to see his implementation where it is made to be 8x faster.
