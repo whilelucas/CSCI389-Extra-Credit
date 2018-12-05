@@ -19,10 +19,10 @@ void convert_all(unsigned nlines, char *lines[], quote_t nums[])
 ```
 This took roughly 0.041707 seconds on my machine (this was based on running the program 3 times and taking the average, and subsequent timings will also be recorded this way).
 
-###Implementation #1:###
+### Implementation #1:
 
-###Implementation #1:###
+### Implementation #1:
 
-###Implementation #3:###
+### Implementation #3:
 
-###Implementation #4:###
+### Implementation #4:
