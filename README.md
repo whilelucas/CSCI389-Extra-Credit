@@ -20,7 +20,7 @@ void convert_all(unsigned nlines, char *lines[], quote_t nums[])
 This took roughly **0.041707 seconds** on my machine (this was based on running the program 3 times and taking the average, subsequent timings will also be recorded this way).
 
 ### Implementation #½:
-The very first thing I tried was to change to C++ so that I could use [`std::strtoul`](https://en.cppreference.com/w/cpp/string/byte/strtoul),  but when I attempted to implement there was absolutely no difference in terms of performance. 🙃
+The very first thing I tried was to change to C++ so that I could use [`std::strtoul`](https://en.cppreference.com/w/cpp/string/byte/strtoul),  but when I attempted to implement this, there was absolutely no difference in terms of performance. 🙃
 
 ### Implementation #1:
 The standard library function `atoi` takes a whole string and magically transforms it into a number. Then it struck me that the 'a' in '`atoi`' stands for ASCII, and I thought I'd use the ASCII table to convert not a whole string, but one character (which is a digit in this case) at a time. This led me to this code:
