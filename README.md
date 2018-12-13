@@ -63,7 +63,7 @@ num = (num * 10) + (*line - '0');
 ```
 Staring at it made me realise that perhaps `num * 10` was a costly operation. Since I was always going to be multiplying by 10, I thought it might be faster to perform that operation using the left-shift operator (`<<`). So that line became:
 ``` C
-num = (num<<3) + (num <<1) + (*line - 48);
+num = (num<<3) + (num <<1) + (*line - '0');
 ```
 As you can see, I changed a straightforward 'multiplying by 10' to a more convoluted 'shift left by 3' (same as multiplying by 8) + 'shift left by 1' (same as multiplying by 2). Despite the convolution it did end up being marginally faster, and now my runtime is **0.006684 seconds**. This is a measly 1.11x faster than implementation #2, but still: *faster*. 😁
 
