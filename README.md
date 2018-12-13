@@ -3,7 +3,7 @@
 
 ## Description
 This project was undertaken for the "CSCI389 - Computer Systems" class at Reed College in the Fall 2018 semester.
-The task is simply to optimize string to `uint32_t` conversion in C.
+The task is simply to optimize `char*` (string) to `uint32_t` conversion in C.
 This project was completed on a MacBook Pro using the VirtualBox Ubuntu VM, with an 2.6 GHz Intel Core i5 processor.
 Most code is written for us, and we merely have to optimize the following function: 
 
