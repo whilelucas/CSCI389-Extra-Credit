@@ -42,6 +42,7 @@ void convert_all(unsigned nlines, char *lines[], quote_t nums[])
 }
 ```
 As a side note, I also changed from post-increment (`i++`) to pre-increment (`++i`) in the original `for` loop since Eitan said this is actually faster. I'm not sure if this made a significant impact, but I guess every bit counts!
+
 Overall I was skeptical of this working because it added another loop into the mix, but it turns that this first implementation would be my most dramatic performance improvement! Average runtime at this point is now **0.009534 seconds**, or 4.37x faster!
 
 ### Implementation #2:
