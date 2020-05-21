@@ -1,4 +1,4 @@
-# CSCI389 Extra-Credit Assignment
+# CSCI389 Extra Credit Assignment
 ### by Lucas Yong
 
 ## Description
